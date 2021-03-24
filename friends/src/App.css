@@ -1,0 +1,266 @@
+.App {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 1%;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  text-shadow: 1px 1px rgba(177, 26, 26, 0);
+}
+
+span {
+  text-shadow: none;
+}
+
+button {
+  padding: 2% 6%;
+  max-width: 50%;
+  font-family: friendsFont;
+  align-self: center;
+}
+
+button:hover {
+  color: rgba(2, 16, 43, 0.007);
+  text-shadow: 1px 1px rgba(134, 1, 1, 0.616);
+  -webkit-box-shadow: 0px 0px 50px 6px #0F0F0E; 
+  box-shadow: 0px 0px 50px 6px #0F0F0E;
+}
+
+.footer-form-question {
+  color: white;
+  text-shadow: 1.5px 1.5px rgba(255, 255, 255, 0.315);
+
+}
+
+.App-header {
+  background-color: #282c34da;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.315);
+  border-radius: 5% 10%;
+}
+
+/* app header bullet styles */
+.aspan {
+  color: red;
+}
+
+.bspan {
+  color: aqua;
+}
+
+.cspan {
+  color: yellow;
+}
+
+.dspan {
+  color: red;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* nav flex box */
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between ;
+  margin: 2%;
+  padding: 2%;
+  /* border: 1px solid red; */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* conditional class for nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .main-content {
+  padding-top: 5%;
+}
+
+/* ul styling */
+ul {
+  list-style: none ;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -.7em;
+  font-size: 1.4rem;
+}
+
+/* anchor reset to remove default styles and assign new behavior */
+a {
+  text-decoration: none;
+  color: black;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.473);
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+li::before {
+  content: "• ";
+}
+
+li.a::before, li.d::before {
+  color: red ;
+}
+
+li.b::before, li.e::before {
+  color: aqua ;
+}
+
+li.c::before {
+  color: yellow ;
+}
+
+/* li.a */
+li.a a:hover, li.d a:hover {
+  text-decoration: none;
+  color:red;
+  text-shadow: 1px 1px rgba(119, 0, 0, 0.616);
+}
+
+li.a a:focus, li.d a:focus {
+  color: red;
+}
+
+li.a a:active, li.d a:active {
+  color: rgba(100, 3, 3, 0.411);
+}
+
+/* li.b */
+li.b a:hover, li.e a:hover {
+  text-decoration: none;
+  color:rgba(20, 51, 51, 0.479);
+  text-shadow: 1px 1px rgba(1, 145, 145, 0.541);
+}
+
+li.b a:focus, li.e a:focus {
+  color: aqua;
+}
+
+li.b a:active, li.e a:active {
+  color: rgb(14, 8, 63);
+}
+
+/* li.c */
+li.c a:hover {
+  text-decoration: none;
+  color:rgba(77, 15, 117, 0.274);
+  text-shadow: rgba(0, 102, 88, 0.301);
+}
+
+li.c a:focus {
+  color: rgb(0, 238, 255);
+}
+
+li.c a:active {
+  color: rgba(54, 54, 8, 0.671);
+}
+
+/* form styles */
+.form form {
+  margin: 20%;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(87, 76, 136, 0.733);
+  border-radius: 15%;
+
+}
+
+.form form, .friend-card, .App-header {
+  -webkit-box-shadow: inset 0px 0px 50px 6px #0F0F0E; 
+  box-shadow: inset 0px 0px 50px 6px #213327;
+}
+
+input {
+  margin: 3%;
+}
+/* .friend-list */
+.friend-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+/* .friend-card for each item in state */
+.friend-card {
+  margin: 2%;
+  background-color: rgba(136, 76, 126, 0.048);
+  border-radius: 15%;
+  padding: 3%;
+  min-width: 30%;
+  max-width: 30%;
+
+}
+
+/* ALL LABEL COLORS i.e. .friend-card & .form */
+.name, .login-txt, .friend-name, .redirect-msg {
+  color: rgba(10, 2, 54, 0.63);
+  text-shadow: 1px 1px rgba(129, 36, 36, 0.068);
+}
+
+.age-label, .username {
+  color: rgb(255, 0, 140);
+  text-shadow: 1px 1px rgba(97, 95, 0, 0.795);
+}
+
+.email, .password {
+  color: rgb(153, 0, 255);
+  text-shadow: 1px 1px rgba(0, 14, 143, 0);
+}
+
+/* redirect spec */
+.redirect-msg {
+  margin-top: 5%;
+}
+
+/* sizing */
+.friend-name {
+  max-width: 80%;
+}
+
+.spinner {
+  margin: 25%;
+}
+
+
+@media (max-width: 600px) {
+  .friend-name {
+    margin: 5%;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
